@@ -1,0 +1,37 @@
+//B. Even Array
+#include<bits/stdc++.h>
+#define optimize() ios_base:: sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define ll long long
+#define endl '\n'
+using namespace std;
+int main()
+{
+    optimize();
+    ll t;   cin>>t;
+
+    while(t--)
+    {
+        ll n,a=0,b=0;  cin>>n;
+        for(int i=0; i<n; i++)
+        {
+            ll x;
+            cin>>x;
+
+            if(x%2 != i%2)
+            {
+                if(i%2==0)
+                {
+                    a++;
+                }
+                else
+                {
+                    b++;
+                }
+            }
+        }
+        if(a!=b)  cout<<"-1"<<endl;
+        else   cout<<a<<endl;
+    }
+
+    return 0;
+}
